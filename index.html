@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atharva R Kesarkar</title>   
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="my_portfolio/style.css" />
+   <style>
+        .background-video {
+      background-image: url('my_portfolio/images/background.jpg'); /* Local image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      pointer-events: none;
+      filter: brightness(0.5);
+    }
+
+    /* Additional styles for flip cards */
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 220px;
+      perspective: 1000px;
+      margin: 20px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+      padding: 20px;
+    }
+    .flip-card-front {
+      color: white;
+    }
+    .flip-card-back {
+      transform: rotateY(180deg);
+      color: white;
+    }
+    .experience-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .experience-section h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #00bcd4;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 768px) {
+      .flip-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>  
+  <header class="navbar">
+    <nav class="nav-container">
+      <div class="logo">
+        <span class="logo-initial">K</span><span class="logo-initial">A</span>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#credentials" class="nav-link">Credentials</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#connect" class="nav-link">Connect</a></li>
+
+      </ul>
+
+      <div class="nav-icons">
+        <a href="https://github.com/atharvakesarkar" target="_blank" class="icon-link">
+          <span class="material-icons">code</span>
+        </a>
+        <a href="https://www.linkedin.com/in/atharva-kesarkar-bb13b7345/" target="_blank" class="icon-link">
+          <span class="material-icons">business_center</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+   <main>
+    <section id="home" class="hero">
+      <div class="background-video"></div>
+
+      <div class="profile">
+        <img src="my_portfolio/images/my_image_no.png" alt="Atharva R Kesarkar" />
+      </div>
+
+      <div class="intro">
+        <h1 class="static-line">Atharva R Kesarkar</h1>
+        <h3 class="typewriter-line" id="typewriter">SQL Developer</h3>
+
+        <div class="cta-buttons">
+          <a href="my_portfolio/files/Atharva_kesarkar_resume.pdf" download class="btn btn-primary">Download Resume</a>
+          <a href="#connect" class="btn btn-secondary">Hire Me</a>
+        </div>
+
+        <div class="skills-wrapper">
+          <div class="skills-track">
+            <div class="skills">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">Database Management</span>
+              <span class="skill-tag">WordPress</span>
+            </div>
+            <div class="skills">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">Database Management</span>
+              <span class="skill-tag">WordPress</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <main class="about-section" id="about">
+      <div class="container">
+        <h1 data-aos="fade-up" class="typewriter">My Journey</h1>
+        <p class="intro" data-aos="fade-up">From curiosity to code, this is the story behind the developer.</p>
+
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="dot"></div>
+            <div class="content">
+              <div class="lottie-icon" id="discovery-animation"></div>
+              <h3>🔍 Discovery Phase</h3>
+              <p>It all began with a fascination for how machines understand instructions. This led me to explore programming and logical thinking.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="dot"></div>
+            <div class="content">
+              <div class="lottie-icon" id="building-animation"></div>
+              <h3>💻 Building Things</h3>
+              <p>Started creating real-world projects and applications — from basic websites to automation scripts and data dashboards.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="dot"></div>
+            <div class="content">
+              <div class="lottie-icon" id="growth-animation"></div>
+              <h3>🚀 Growth Mindset</h3>
+              <p>I believe in learning by doing. Whether it's Python, JavaScript, or AI — I'm constantly evolving with the tech I work with.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="dot"></div>
+            <div class="content">
+              <div class="lottie-icon" id="driving-animation"></div>
+              <h3>🌍 What Drives Me</h3>
+              <p>Solving meaningful problems, collaborating with creative minds, and building tools that make life easier for others.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+<!-- CREDENTIALS SECTION (Education + Certificates Gallery) -->
+<section id="credentials" class="credentials-section">
+  <h2 class="section-title">Credentials</h2>
+
+  <!-- Education Timeline -->
+  <div class="education-block">
+    <h3 class="section-subtitle">Education</h3>
+    <ul class="education-list">
+      <li>
+        <strong>B.Voc in AI & Data Science</strong><br>
+        Thakur College of Engineering & Technology<br>
+        <small>2024 - 2028</small>
+      </li>
+      <li>
+        <strong>HSC - Science</strong><br>
+        Bwales Maritime Defence Academy, Aurangabad<br>
+        <small>2023 - 2024</small>
+      </li>
+      <li>
+        <strong>SSC - State Board</strong><br>
+        Don Bosco School, Thane<br>
+        <small>2021 - 2022</small>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Certificates Gallery -->
+  <div class="certificates-block">
+    <h3 class="section-subtitle">Certifications</h3>
+    <div class="certificates-grid">
+
+      <!-- Certificate Card 1 -->
+      <div class="certificate-card">
+        <h4>Microsoft Office Specialist: Excel Associate (Office 2019)</h4>
+        <p>Certified by Microsoft, covers essential Excel functions, formulas, and data tools.</p>
+        <a href="https://www.credly.com/badges/e5a26914-c981-4eda-90c0-f24f3d4d037c/linked_in_profile" target="_blank">View Certificate</a>
+      </div>
+
+      <!-- Certificate Card 2 -->
+      <div class="certificate-card">
+        <h4>One Roadmap Python Certificate</h4>
+        <p>Certified by One Roadmap, validates core Python skills through a skill-based assessment..</p>
+        <a href="https://oneroadmap.io/skills/python/certificate/CERT-766F4780" target="_blank">View Certificate</a>
+      </div>
+
+      <!-- Certificate Card 3 -->
+      <div class="certificate-card">
+        <h4>HP LIFE – AI for Beginners</h4>
+        <p>Certified by HP Foundation, introduces core AI concepts, applications, and ethics.</p>
+        <a href="https://www.life-global.org/certificate/21b73ed2-48d5-464a-a5d9-8e24a3b124df" target="_blank">View Certificate</a>
+      </div>
+
+       <!-- Certificate Card 4 -->
+      <div class="certificate-card">
+        <h4>TechVidvan – DSA with Python</h4>
+        <p>Certified by TechVidvan, covers fundamental data structures and algorithms using Python.</p>
+        <a href="error occured" target="_blank">View Certificate</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- EXPERIENCE SECTION: Futuristic Redesign -->
+<section id="experience" class="experience-section">
+  <h2 class="section-title">Experience</h2>
+  <div class="experience-wrapper">
+
+    <!-- Experience Card 1 -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>🏢 Smart-Byte Computer Classes</h3>
+        <p class="role">Teaching Assistant <span class="duration">(Apr 2025 - Present)</span></p>
+      </div>
+      <ul class="experience-points">
+        <li>⚒️ Taught Python & Web Development to beginners</li>
+        <li>🛠️ Mentored students through project-based learning</li>
+        <li>📈 Delivered sessions on SQL & data handling</li>
+      </ul>
+      <div class="experience-tech">
+        <span>Python</span>
+        <span>HTML/CSS</span>
+        <span>JavaScript</span>
+        <span>SQL</span>
+      </div>
+    </div>
+
+    <!-- Experience Card 2 -->
+    <div class="experience-card">
+      <div class="experience-header">
+        <h3>💼 MJ Consultancy</h3>
+        <p class="role">Web Developer Intern <span class="duration">(May 2025 - Jun 2025)</span></p>
+      </div>
+      <ul class="experience-points">
+        <li>✨ Designed and developed a responsive multi-page company website</li>
+        <li>💬 Integrated Google reviews and built feedback system</li>
+        <li>📅 Created Appraisal Letter generator for client HR module</li>
+      </ul>
+      <div class="experience-tech">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>GitHub</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- PROJECTS SECTION: Code Editor Style -->
+<section id="projects" class="projects-section">
+  <h2 style="text-align: center; color: #00fff7; margin-bottom: 20px; font-size: 28px; font-family: 'Share Tech Mono', monospace;">Projects</h2>
+  <div class="code-editor">
+
+    <!-- Top Bar -->
+    <div class="editor-header">
+      <span class="red"></span>
+      <span class="yellow"></span>
+      <span class="green"></span>
+      <span class="editor-title">projects / code-view</span>
+    </div>
+
+    <div class="editor-body">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <ul>
+          <li class="active" title="Gesture Control Interface"><code><a href="#cursor-controlle">📂 cursor-controlle.js</a></code></li>
+          <li title="Women's Safety System"><code><a href="#women-safety">📂 women-safety.py</a></code></li>
+          <li title="AI Fitness Advisor"><code><a href="#ai-fitness">📂 AI-Fitness-Advisor.py</a></code></li>
+          <li title="Azure Document Intelligence"><code><a href="#document-intelligence">📂 document-intelligence.cs</a></code></li>
+          <li title="Developer Portfolio"><code><a href="#portfolio">📂 portfolio.html</a></code></li>
+        </ul>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="code-window">
+        <pre id="cursor-controlle"><code class="code-card">// Cursor Controlled Interface
+const project = "Gesture Control Interface";
+const tech = ["MediaPipe", "Python", "Tkinter"];
+
+> <a href="https://github.com/atharvakesarkar/cursor-controller" class="btn" target="_blank">GitHub</a></code></pre>
+
+        <pre id="women-safety"><code class="code-card">// Women Safety App
+const project = "Women's Safety System";
+const tech = ["Open AI", "Firebase", "Google Maps"];
+
+> <a href="https://github.com/atharvakesarkar/women-safety" class="btn" target="_blank">GitHub</a></code></pre>
+
+        <pre id="ai-fitness"><code class="code-card">// AI Fitness Advisor
+const project = "AI Fitness Advisor";
+const tech = ["Python", "OpenCV", "Flask"];
+
+> <a href="https://github.com/atharvakesarkar/AI-Fitenss-Advisor" class="btn" target="_blank">GitHub</a></code></pre>
+
+        <pre id="document-intelligence"><code class="code-card">// Azure Document Intelligence
+const project = "AI DocBot with Azure";
+const tech = ["Azure AI Studio", "OCR", "Python"];
+
+> <a href="https://github.com/atharvakesarkar/Document-intelligence" class="btn" target="_blank">GitHub</a></code></pre>
+
+        <pre id="portfolio"><code class="code-card">// Personal Portfolio Website
+const project = "Developer Portfolio";
+const tech = ["HTML", "CSS", "JavaScript"];
+
+> <a href="https://github.com/atharvakesarkar/portfolio" class="btn" target="_blank">GitHub</a></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Additional CSS Styles -->
+<style>
+.sidebar ul li {
+  position: relative;
+  padding-left: 10px;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+.sidebar ul li.active,
+.sidebar ul li:hover {
+  background-color: #1e1e2f;
+  border-left: 3px solid #00fff7;
+  box-shadow: inset 0 0 10px #00fff766;
+}
+.sidebar ul li code a {
+  color: #ccc;
+  text-decoration: none;
+}
+.sidebar ul li:hover code a {
+  color: #00fff7;
+}
+.code-window .code-card {
+  animation: typing 0.7s ease-out;
+  border-left: 4px solid #00fff7;
+  background: #0e101a;
+  box-shadow: 0 0 12px #00fff744;
+}
+@keyframes typing {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<section id="connect" class="connect-circuit">
+  <h2 class="connect-title">🤝 Let's Build Together</h2>
+  <p class="connect-quote">Connections spark innovation. Reach out. Collaborate. Create.</p>
+
+  <div class="circuit-board"> <!-- fixed -->
+    <div class="node email">
+      <span>📧</span>
+      <a href="mailto:kesarkaratharva24@gmail.com">Email</a>
+    </div>
+    <div class="node github">
+      <span>💻</span>
+      <a href="https://github.com/atharvakesarkar" target="_blank">GitHub</a>
+    </div>
+    <div class="node linkedin">
+      <span>🔗</span>
+      <a href="https://www.linkedin.com/in/atharva-kesarkar-bb13b7345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+    </div>
+    <div class="node whatsapp">
+      <span>💬</span>
+      <a href="https://wa.me/919820919318" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+
+  <p class="blink-line">[⏳] Waiting for your response...</p>
+</section>
+
+<footer class="terminal-footer">
+  <div class="terminal-window">
+    <p class="line">> Connection closed with <span class="blink-text">atharvakesarkar.dev</span></p>
+    <p class="line">> System shutting down... [OK]</p>
+    <p class="line">> Thank you for exploring.</p>
+    <p class="signature">-- Atharva R Kesarkar</p>
+  </div>
+</footer>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+  const navlinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navlinks.classList.toggle("active");
+  });
+
+    const lines = ["SQL Developer", "AI Enthusiast", "Assitant Teacher", "Python Developer"];
+    let lineIndex = 0, charIndex = 0;
+    const speed = 90, holdTime = 3000;
+    const typedText = document.getElementById('typewriter');
+
+    function typeLoop() {
+      if (charIndex < lines[lineIndex].length) {
+        typedText.textContent += lines[lineIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeLoop, speed);
+      } else {
+        setTimeout(() => {
+          charIndex = 0;
+          lineIndex = (lineIndex + 1) % lines.length;
+          typedText.textContent = '';
+          typeLoop();
+        }, holdTime);
+      }
+    }
+    window.onload = typeLoop;
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const top = section.offsetTop - 100;
+        if (window.pageYOffset >= top) current = section.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+
+    AOS.init();
+    particlesJS.load('particles-js', 'particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+
+    // Load Lottie animations
+    lottie.loadAnimation({
+      container: document.getElementById('discovery-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets6.lottiefiles.com/packages/lf20_8g3g5g.json' // Discovery animation
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById('building-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets6.lottiefiles.com/packages/lf20_8g3g5g.json' // Building animation
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById('growth-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets6.lottiefiles.com/packages/lf20_8g3g5g.json' // Growth animation
+    });
+
+    lottie.loadAnimation({
+      container: document.getElementById('driving-animation'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://assets6.lottiefiles.com/packages/lf20_8g3g5g.json' // Driving animation
+    });
+
+  </script>
+</body>
+</html>
